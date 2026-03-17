@@ -1,0 +1,26 @@
+{
+  "name": "@wirus/backend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "@nestjs/platform-socket.io": "^11.1.6",
+    "@nestjs/websockets": "^11.1.6",
+    "@wirus/game-engine": "workspace:*",
+    "@wirus/shared-types": "workspace:*",
+    "ioredis": "^5.8.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "socket.io": "^4.8.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "npm run build && node --env-file=.env.local --enable-source-maps dist/apps/backend/src/main.js",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "node -e \"console.log('backend tests not implemented yet')\"",
+    "test:coverage": "node -e \"console.log('backend coverage not implemented yet')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

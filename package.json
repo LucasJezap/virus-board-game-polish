@@ -1,0 +1,31 @@
+{
+  "name": "wirus",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.0.0",
+    "@types/jest": "^30.0.0",
+    "tsx": "^4.20.3",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --parallel --filter @wirus/backend --filter @wirus/frontend dev",
+    "dev:local": "node scripts/dev-local.mjs",
+    "dev:local:reset": "node scripts/dev-local.mjs --reset-redis",
+    "lint": "pnpm -r lint",
+    "test": "jest --config jest.config.cjs --runInBand",
+    "test:coverage": "jest --config jest.config.cjs --runInBand --coverage",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

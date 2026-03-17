@@ -1,0 +1,27 @@
+{
+  "name": "@wirus/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@wirus/shared-types": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.7",
+    "clsx": "^2.1.1",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io-client": "^4.8.1",
+    "zustand": "^5.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3100",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "node -e \"console.log('frontend tests not implemented yet')\"",
+    "test:coverage": "node -e \"console.log('frontend coverage not implemented yet')\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
